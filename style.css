@@ -1,0 +1,130 @@
+.container {
+  font-family: Times;
+  font-size: 16pt;
+  line-height: 200%;
+  text-align: justify;
+  display: grid;
+  width: 100%;
+  height: 900px;
+  grid-template-columns: 210px 500px auto;
+  grid-template-rows: 100px 400px auto 100px;
+  grid-template-areas:
+    "header header header"
+    "menu content image"
+    "menu calculations image"
+    "footer footer footer";
+  background-color: #b9f442;
+}
+
+.header {
+  padding-top: 25px;
+  font-size: 26pt;
+  text-align: center;
+  grid-area: header;
+  grid-column: 1 / span 3;
+  grid-row: 1;
+  background-color: #b9f442;
+}
+
+.menu {
+  border-width:medium;
+  border-style: solid;
+  margin: 5px;
+  font-size: 12pt;
+  line-height: 120%;
+  padding-top: 15px;
+  padding-left: 10px;
+  grid-area: menu;
+  grid-column: 1;
+  grid-row: 2 /span 2;
+  background-color: white;
+}
+
+.content {
+  border-width:medium;
+  border-style: solid;
+  margin: 5px;
+  padding: 15px;
+  grid-area: content;
+  grid-column: 2;
+  grid-row: 2;
+  background-color: white;
+}
+
+.calculations {
+  border-width:medium;
+  border-style: solid;
+  margin: 5px;
+  font-size: 18pt;
+  line-height: 210%;
+  padding: 20px;
+  word-spacing: 10px;
+  grid-area: calculations;
+  grid-column: 2;
+  grid-row: 3;
+  background-color: white;
+  text-align: justify;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border: 5px;
+  border-radius: 20px;
+  border-style: ridge;
+  grid-area: footer;
+  grid-column: 1 / span 3;
+  grid-row: 4;
+  background-color: #b9f442;
+}
+
+.image {
+  grid-area: image;
+  grid-column: 3;
+  grid-row: 2 / span 2;
+  background-color: white;
+  text-align: center;
+  background-color: #b9f442;
+}
+
+.container .image {
+  position: relative;
+}
+
+.container .image img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.container .image img.showed{
+  opacity: 1;
+}
+
+#launch {
+  width: 400px;
+}
+
+#quantity {
+  width: 155px;
+}
+
+#from {
+  width: 110px;
+}
+
+#to {
+  width: 110px;
+}
+
+#choicemenu{
+  font-size: 16pt;
+}
+
+span {
+  cursor: pointer;
+}
