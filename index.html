@@ -1,184 +1,218 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Курс валют</title>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
-</head>
-<body onload="newdate()">
-  <div class="container">
-    <div class="header">
-      Сайт предоставляет информацию о курсе валют
-    </div>
-    <div class="menu">
-      <span id="choicemenu">Выберете валюту:</span>
-      <ul id="list">
-        <li><span>AMD</span></li>
-        <li><span>AUD</span></li>
-        <li><span>AZN</span></li>
-        <li><span>BGN</span></li>
-        <li><span>BRL</span></li>
-        <li><span>BYN</span></li>
-        <li><span>CAD</span></li>
-        <li><span>CHF</span></li>
-        <li><span>CNY</span></li>
-        <li><span>CZK</span></li>
-        <li><span>DKK</span></li>
-        <li><span>EUR</span></li>
-        <li><span>GBP</span></li>
-        <li><span>HKD</span></li>
-        <li><span>HUF</span></li>
-        <li><span>INR</span></li>
-        <li><span>JPY</span></li>
-        <li><span>KGS</span></li>
-        <li><span>KRW</span></li>
-        <li><span>KZT</span></li>
-        <li><span>MDL</span></li>
-        <li><span>NOK</span></li>
-        <li><span>PLN</span></li>
-        <li><span>RON</span></li>
-        <li><span>SEK</span></li>
-        <li><span>SGD</span></li>
-        <li><span>TJS</span></li>
-        <li><span>TMT</span></li>
-        <li><span>TRY</span></li>
-        <li><span>UAH</span></li>
-        <li><span>USD</span></li>
-        <li><span>UZS</span></li>
-        <li><span>XDR</span></li>
-        <li><span>ZAR</span></li>
-      </ul>
-    </div>
-    <div class="content" id="content">
-      Информация о валюте.
-    </div>
-    <div class="image">
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/b/b3/100%2C000_Armenian_dram_-_2009_%28obverse%29.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/ru/3/37/Australian_100note_front.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/6/68/1manat09a.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/ru/7/77/20_leva_obverse.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/0/0b/50real_2.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/7/7a/500_Belarus_2009_front.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/f/f9/Banknote_of_the_Colonial_Bank_of_Canada.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/5/5c/CHF10_8_front_horizontal.jpg' />
-      <img  src='https://www.tourprom.ru/site_media/images/banknote/110/yuanj-5-2.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/d/de/500_Tschechische_Kronen_Vorderseite.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/ru/3/3a/100_danske_kroner_1997_face.jpg' />
-      <img  src='https://prm.ua/wp-content/uploads/2018/09/1-2.jpg' />
-      <img  src='https://www.calc.ru/imgs/articles/194929374555675db2e355f4.89408844.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/6/6f/HSBC_hkd1_1935_o.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/5/55/HUF_1000_2018_obverse.png' />
-      <img  src='https://www.calc.ru/imgs/articles3/18/06/7417705591208a3e0650.26490435.jpg' />
-      <img  src='https://www.tourprom.ru/site_media/images/banknote/118/iena-10000-1.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/5/5d/5000_som_2009_ob.jpg' />
-      <img  src='https://www.tourprom.ru/site_media/images/banknote/99/vony-5000-1.jpg' />
-      <img  src='https://www.tourprom.ru/site_media/images/banknote/108/tenge-2000-2.jpg' />
-      <img  src='https://www.tourprom.ru/site_media/images/banknote/58/moldavskii-lei-20-2.jpg' />
-      <img  src='https://banknotes.finance.ua/src/images/full/132-0.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/ru/b/b4/20_%D0%B7%D0%BB_1994_%D0%B0%D0%B2%D0%B5%D1%80%D1%81.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/1/14/500_lei._Romania%2C_2005_a.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/b/bb/1000SEK-1976.jpg' />
-      <img  src='https://banknotes.finance.ua/src/images/full/157-0.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/8/85/TajikistanP15-5Somoni-1999%282000%29-donatedsb_f.jpg' />
-      <img  src='https://www.tourprom.ru/site_media/images/banknote/83/manat-50-1.jpg' />
-      <img  src='https://upload.wikimedia.org/wikipedia/commons/b/b0/1_Million_TL_obverse.jpg' />
-      <img  src='https://www.tourprom.ru/site_media/images/banknote/115/ukrainskaya-grivna-50-1.jpg' />
-      <img  src='https://banknotes.finance.ua/src/images/full/1-0.jpg' />
-      <img  src='https://www.tourprom.ru/site_media/images/banknote/85/sum-100-1.jpg' />
-      <img  src='http://whatismoney.ru/wp-content/uploads/sdr-imf-825-825x464.jpg' />
-      <img  src='https://www.tourprom.ru/site_media/images/banknote/98/yuzhnoafrikanskii-rend-200-1.jpg' />
-    </div>
-    <div class="calculations">
-      Калькулятор валют. <br>
-      Перевод из <select id="from">
-        <option>AMD</option>
-        <option>AUD</option>
-        <option>AZN</option>
-        <option>BGN</option>
-        <option>BRL</option>
-        <option>BYN</option>
-        <option>CAD</option>
-        <option>CHF</option>
-        <option>CNY</option>
-        <option>CZK</option>
-        <option>DKK</option>
-        <option>EUR</option>
-        <option>GBP</option>
-        <option>HKD</option>
-        <option>HUF</option>
-        <option>INR</option>
-        <option>JPY</option>
-        <option>KGS</option>
-        <option>KRW</option>
-        <option>KZT</option>
-        <option>MDL</option>
-        <option>NOK</option>
-        <option>PLN</option>
-        <option>RON</option>
-        <option>SEK</option>
-        <option>SGD</option>
-        <option>TJS</option>
-        <option>TMT</option>
-        <option>TRY</option>
-        <option>UAH</option>
-        <option>USD</option>
-        <option>UZS</option>
-        <option>XDR</option>
-        <option>ZAR</option>
-      </select> в
-      <select id="to">
-        <option>AMD</option>
-        <option>AUD</option>
-        <option>AZN</option>
-        <option>BGN</option>
-        <option>BRL</option>
-        <option>BYN</option>
-        <option>CAD</option>
-        <option>CHF</option>
-        <option>CNY</option>
-        <option>CZK</option>
-        <option>DKK</option>
-        <option>EUR</option>
-        <option>GBP</option>
-        <option>HKD</option>
-        <option>HUF</option>
-        <option>INR</option>
-        <option>JPY</option>
-        <option>KGS</option>
-        <option>KRW</option>
-        <option>KZT</option>
-        <option>MDL</option>
-        <option>NOK</option>
-        <option>PLN</option>
-        <option>RON</option>
-        <option>SEK</option>
-        <option>SGD</option>
-        <option>TJS</option>
-        <option>TMT</option>
-        <option>TRY</option>
-        <option>UAH</option>
-        <option>USD</option>
-        <option>UZS</option>
-        <option>XDR</option>
-        <option>ZAR</option>
-      </select> <br>
-      Укажите количество: <input type="number" min="0" max="1000000" value="1" id="quantity"/> <br>
-      <input type="button" value="Перевести" id="launch" /><br>
-      Результат перевода: <input type="number" min="0" id="answer" readonly />
-    </div>
-    <div class="footer">
-      <div>
-        Доллар США: <span id="USD"></span>
-        &#160;Евро: <span id="EUR"></span>
-        &#160;Российский рубль: <span id="RUB"></span>
-      </div>
-      <div>
-        Сейчас: <span id="currentdate"></span>
+  <head>
+    <meta charset="utf-8">
+    <title>Конвертер валют</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="newdate()">
+    <div class="navbar navbar-header">
+      <div class="container">
+        <h4>Курс и конвертер валют.</h4>
+        <ul class="nav" role="tablist">
+          <li><button class="btn btn-primary active" data-target="#home" role="tab" data-toggle="tab">Главная</button></li>
+          <li><button class="btn btn-success" data-target="#currencies" role="tab" data-toggle="tab">Валюты</button></li>
+          <li><button class="btn btn-danger" data-target="#calculator" role="tab" data-toggle="tab">Конвертер</button></li>
+        </ul>
       </div>
     </div>
- </div>
-</body>
-<script type="text/javascript" src="visualization.js"></script>
-<script type="text/javascript" src="calculations.js"></script>
-<script type="text/javascript" src="footer.js"></script>
+    <div class="container">
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <p>Сайт предоставляет информацию о текущем курсе валют, а так же конвертер валют.
+          <br><br>
+          Данные берутся с api <a href="https://www.cbr-xml-daily.ru/daily_json.js">https://www.cbr-xml-daily.ru/daily_json.js</a>.
+          <br><br>
+          Для получения информации о валютах перейдите на соответствующую вкладку и выберете в списке слева интересующую вас валюту.
+          <br><br>
+          Что бы воспользоваться конвертором валют перейдите на нужную вкладку и заполните форму конвертора, а затем нажмите кнопку «Перевести».
+          <br><br><br>
+          Доллар США: <a id="USD"></a>
+          <br><br>
+          Евро: <a id="EUR"></a>
+          <br><br>
+          Российский рубль: <a id="RUB"></a>
+          <br><br></p>
+          <p class="text-right">Сейчас: <a id="currentdate"></a></p>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="currencies">
+          <div class="row justify-content-md-center">
+            <div class="col-md-2">
+              <span id="choicemenu">Выберете валюту:</span>
+              <ul id="list">
+                <li><span>AMD</span></li>
+                <li><span>AUD</span></li>
+                <li><span>AZN</span></li>
+                <li><span>BGN</span></li>
+                <li><span>BRL</span></li>
+                <li><span>BYN</span></li>
+                <li><span>CAD</span></li>
+                <li><span>CHF</span></li>
+                <li><span>CNY</span></li>
+                <li><span>CZK</span></li>
+                <li><span>DKK</span></li>
+                <li><span>EUR</span></li>
+                <li><span>GBP</span></li>
+                <li><span>HKD</span></li>
+                <li><span>HUF</span></li>
+                <li><span>INR</span></li>
+                <li><span>JPY</span></li>
+                <li><span>KGS</span></li>
+                <li><span>KRW</span></li>
+                <li><span>KZT</span></li>
+                <li><span>MDL</span></li>
+                <li><span>NOK</span></li>
+                <li><span>PLN</span></li>
+                <li><span>RON</span></li>
+                <li><span>SEK</span></li>
+                <li><span>SGD</span></li>
+                <li><span>TJS</span></li>
+                <li><span>TMT</span></li>
+                <li><span>TRY</span></li>
+                <li><span>UAH</span></li>
+                <li><span>USD</span></li>
+                <li><span>UZS</span></li>
+                <li><span>XDR</span></li>
+                <li><span>ZAR</span></li>
+              </ul>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-8">
+          <div  id="content"></div>
+            <div class="image">
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/b/b3/100%2C000_Armenian_dram_-_2009_%28obverse%29.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/ru/3/37/Australian_100note_front.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/6/68/1manat09a.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/ru/7/77/20_leva_obverse.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/0/0b/50real_2.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/7/7a/500_Belarus_2009_front.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/f/f9/Banknote_of_the_Colonial_Bank_of_Canada.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/5/5c/CHF10_8_front_horizontal.jpg' />
+              <img  src='https://www.tourprom.ru/site_media/images/banknote/110/yuanj-5-2.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/d/de/500_Tschechische_Kronen_Vorderseite.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/ru/3/3a/100_danske_kroner_1997_face.jpg' />
+              <img  src='https://prm.ua/wp-content/uploads/2018/09/1-2.jpg' />
+              <img  src='https://www.calc.ru/imgs/articles/194929374555675db2e355f4.89408844.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/6/6f/HSBC_hkd1_1935_o.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/5/55/HUF_1000_2018_obverse.png' />
+              <img  src='https://www.calc.ru/imgs/articles3/18/06/7417705591208a3e0650.26490435.jpg' />
+              <img  src='https://www.tourprom.ru/site_media/images/banknote/118/iena-10000-1.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/5/5d/5000_som_2009_ob.jpg' />
+              <img  src='https://www.tourprom.ru/site_media/images/banknote/99/vony-5000-1.jpg' />
+              <img  src='https://www.tourprom.ru/site_media/images/banknote/108/tenge-2000-2.jpg' />
+              <img  src='https://www.tourprom.ru/site_media/images/banknote/58/moldavskii-lei-20-2.jpg' />
+              <img  src='https://banknotes.finance.ua/src/images/full/132-0.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/ru/b/b4/20_%D0%B7%D0%BB_1994_%D0%B0%D0%B2%D0%B5%D1%80%D1%81.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/1/14/500_lei._Romania%2C_2005_a.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/b/bb/1000SEK-1976.jpg' />
+              <img  src='https://banknotes.finance.ua/src/images/full/157-0.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/8/85/TajikistanP15-5Somoni-1999%282000%29-donatedsb_f.jpg' />
+              <img  src='https://www.tourprom.ru/site_media/images/banknote/83/manat-50-1.jpg' />
+              <img  src='https://upload.wikimedia.org/wikipedia/commons/b/b0/1_Million_TL_obverse.jpg' />
+              <img  src='https://www.tourprom.ru/site_media/images/banknote/115/ukrainskaya-grivna-50-1.jpg' />
+              <img  src='https://banknotes.finance.ua/src/images/full/1-0.jpg' />
+              <img  src='https://www.tourprom.ru/site_media/images/banknote/85/sum-100-1.jpg' />
+              <img  src='http://whatismoney.ru/wp-content/uploads/sdr-imf-825-825x464.jpg' />
+              <img  src='https://www.tourprom.ru/site_media/images/banknote/98/yuzhnoafrikanskii-rend-200-1.jpg' />
+            </div>
+          </div>
+        </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="calculator">
+          <div class="row">
+            <div id="calculations" class="col-md-6">
+              Конвертер валют.
+              <br><br>
+              Перевод из <select id="from">
+                <option>AMD</option>
+                <option>AUD</option>
+                <option>AZN</option>
+                <option>BGN</option>
+                <option>BRL</option>
+                <option>BYN</option>
+                <option>CAD</option>
+                <option>CHF</option>
+                <option>CNY</option>
+                <option>CZK</option>
+                <option>DKK</option>
+                <option>EUR</option>
+                <option>GBP</option>
+                <option>HKD</option>
+                <option>HUF</option>
+                <option>INR</option>
+                <option>JPY</option>
+                <option>KGS</option>
+                <option>KRW</option>
+                <option>KZT</option>
+                <option>MDL</option>
+                <option>NOK</option>
+                <option>PLN</option>
+                <option>RON</option>
+                <option>SEK</option>
+                <option>SGD</option>
+                <option>TJS</option>
+                <option>TMT</option>
+                <option>TRY</option>
+                <option>UAH</option>
+                <option>USD</option>
+                <option>UZS</option>
+                <option>XDR</option>
+                <option>ZAR</option>
+              </select> в
+              <select id="to">
+                <option>AMD</option>
+                <option>AUD</option>
+                <option>AZN</option>
+                <option>BGN</option>
+                <option>BRL</option>
+                <option>BYN</option>
+                <option>CAD</option>
+                <option>CHF</option>
+                <option>CNY</option>
+                <option>CZK</option>
+                <option>DKK</option>
+                <option>EUR</option>
+                <option>GBP</option>
+                <option>HKD</option>
+                <option>HUF</option>
+                <option>INR</option>
+                <option>JPY</option>
+                <option>KGS</option>
+                <option>KRW</option>
+                <option>KZT</option>
+                <option>MDL</option>
+                <option>NOK</option>
+                <option>PLN</option>
+                <option>RON</option>
+                <option>SEK</option>
+                <option>SGD</option>
+                <option>TJS</option>
+                <option>TMT</option>
+                <option>TRY</option>
+                <option>UAH</option>
+                <option>USD</option>
+                <option>UZS</option>
+                <option>XDR</option>
+                <option>ZAR</option>
+              </select>
+              <br><br>
+              Укажите количество: <input type="number" min="0" max="1000000" value="1" id="quantity"/> <br><br>
+              <input type="button" value="Перевести" id="launch" /><br><br>
+              Результат перевода: <input type="number" min="0" id="answer" readonly />
+            </div>
+              <div class="col-md-6">
+                <img id="calculator_image" src="https://rim-taxi.com/uploads/froala/article/image/Exchange_rate.png" alt="">
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="visualization.js"></script>
+  <script type="text/javascript" src="calculations.js"></script>
+  <script type="text/javascript" src="footer.js"></script>
+  </body>
 </html>

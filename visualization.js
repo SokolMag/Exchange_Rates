@@ -1,5 +1,5 @@
 document.querySelector('#list').onclick = function(event) {
-  var images = document.querySelectorAll('.container .image img');
+  var images = document.querySelectorAll('.image img');
   if (event.target.tagName != 'SPAN') {return;}
   var number = connection(event.target.innerHTML);
   for (i = 0; i < images.length; i++){
@@ -16,13 +16,14 @@ function connection(currency){
     .then( response => response.json())
     .then( data => {
         document.querySelector('#content').innerHTML =
-        'Информация о валюте. <br>Символьный код: '+data.Valute[currency].CharCode+
+        'Информация о валюте. <br><br>Символьный код: '+data.Valute[currency].CharCode+
         '<br>ID: '+data.Valute[currency].ID+
         '<br>Наименование: '+data.Valute[currency].Name+
         '<br>Номинал: '+data.Valute[currency].Nominal+
         '<br>Числовой код: '+data.Valute[currency].NumCode+
         '<br>Предыдущая стоимость: '+(data.Valute[currency].Previous/(data.Valute.UAH.Previous/data.Valute.UAH.Nominal))+
-        '<br>Текущая стоимость: '+(data.Valute[currency].Value/(data.Valute.UAH.Value/data.Valute.UAH.Nominal));})
+        '<br>Текущая стоимость: '+(data.Valute[currency].Value/(data.Valute.UAH.Value/data.Valute.UAH.Nominal))+
+        '<br><br>Изображение валюты:';})
         switch (currency) {
           case 'AMD': return 0; break;
           case 'AUD': return 1; break;

@@ -7,7 +7,7 @@ document.querySelector('#launch').onclick = function(){
           const s = document.querySelector('#from').value+'_to_'+document.querySelector('#to').value;
           const result =converter[s](quantity.value);
           answer.value = result;
-        } else answer.value = 1;})
+        } else answer.value = quantity.value;})
 }
 
 const converter = new Proxy({}, {
